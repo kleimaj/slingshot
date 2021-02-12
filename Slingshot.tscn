@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Projectile.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/pill_1.png" type="Texture" id=2]
+[ext_resource path="res://Slingshot.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 40.7079
@@ -46,6 +47,10 @@ drag_margin_right = 1.0
 drag_margin_bottom = 1.0
 
 [node name="RubberBand" type="Line2D" parent="."]
+position = Vector2( 60, 90 )
+width = 4.0
+default_color = Color( 0.4, 0.501961, 1, 1 )
+script = ExtResource( 3 )
 
 [node name="GUI" type="CanvasLayer" parent="."]
 
