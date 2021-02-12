@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="Root" type="Node2D"]
+
+[node name="Projectile" type="RigidBody2D" parent="."]
+
+[node name="RubberBand" type="Line2D" parent="."]
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="Environment" type="Node2D" parent="."]
