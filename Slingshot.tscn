@@ -4,6 +4,12 @@
 
 [node name="Projectile" type="RigidBody2D" parent="."]
 
+[node name="Sprite" type="Sprite" parent="Projectile"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Projectile"]
+
+[node name="Camera2D" type="Camera2D" parent="Projectile"]
+
 [node name="RubberBand" type="Line2D" parent="."]
 
 [node name="GUI" type="CanvasLayer" parent="."]
