@@ -47,7 +47,8 @@ drag_margin_right = 1.0
 drag_margin_bottom = 1.0
 
 [node name="RubberBand" type="Line2D" parent="."]
-position = Vector2( 60, 90 )
+position = Vector2( 2.10767, -0.611931 )
+points = PoolVector2Array( 0, 0, 0, 0 )
 width = 4.0
 default_color = Color( 0.4, 0.501961, 1, 1 )
 script = ExtResource( 3 )
