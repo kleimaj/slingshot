@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Slingshot"
-run/main_scene="res://Slingshot.tscn"
+run/main_scene="res://Scenes/Slingshot.tscn"
 config/icon="res://icon.png"
 
 [rendering]

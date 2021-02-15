@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Projectile.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/pill_1.png" type="Texture" id=2]
-[ext_resource path="res://Slingshot.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Slingshot.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Projectile.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/pill_1.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/clouds.png" type="Texture" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -18,13 +18,13 @@ extents = Vector2( 1592.25, 13.6999 )
 position = Vector2( 1118.57, -65.0688 )
 input_pickable = true
 mode = 1
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Projectile"]
 position = Vector2( 6.76448, 1.58001 )
 rotation = -1.5708
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -51,7 +51,7 @@ position = Vector2( 1116.29, -67.0894 )
 points = PoolVector2Array( 0, 0, 0, 0 )
 width = 4.0
 default_color = Color( 0.4, 0.501961, 1, 1 )
-script = ExtResource( 3 )
+script = ExtResource( 1 )
 
 [node name="GUI" type="CanvasLayer" parent="."]
 
