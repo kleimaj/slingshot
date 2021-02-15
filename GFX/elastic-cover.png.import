@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/elastic-cover.png-c8dbf5d2c77367fe19da90add74a8761.stex"
+path="res://.import/elastic-cover.png-673224464a636a72bb6c7f06e6d4c1d5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/graphics/elastic-cover.png"
-dest_files=[ "res://.import/elastic-cover.png-c8dbf5d2c77367fe19da90add74a8761.stex" ]
+source_file="res://GFX/elastic-cover.png"
+dest_files=[ "res://.import/elastic-cover.png-673224464a636a72bb6c7f06e6d4c1d5.stex" ]
 
 [params]
 

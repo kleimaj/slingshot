@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/regularExplosion06.png-f1f7ee7d3d25e89d2b6e7597c87cfa49.stex"
+path="res://.import/regularExplosion06.png-f455f44f80d9d3c47ef46219e0ccd128.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/graphics/kenney2/explosion/regularExplosion06.png"
-dest_files=[ "res://.import/regularExplosion06.png-f1f7ee7d3d25e89d2b6e7597c87cfa49.stex" ]
+source_file="res://GFX/kenney2/explosion/regularExplosion06.png"
+dest_files=[ "res://.import/regularExplosion06.png-f455f44f80d9d3c47ef46219e0ccd128.stex" ]
 
 [params]
 

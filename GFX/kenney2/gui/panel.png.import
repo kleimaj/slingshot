@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/panel.png-c45a6a18f168c5ea6fbaec9dea2b2813.stex"
+path="res://.import/panel.png-0c1a6d666f39441e2121008497fb4f69.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/graphics/kenney2/gui/panel.png"
-dest_files=[ "res://.import/panel.png-c45a6a18f168c5ea6fbaec9dea2b2813.stex" ]
+source_file="res://GFX/kenney2/gui/panel.png"
+dest_files=[ "res://.import/panel.png-0c1a6d666f39441e2121008497fb4f69.stex" ]
 
 [params]
 

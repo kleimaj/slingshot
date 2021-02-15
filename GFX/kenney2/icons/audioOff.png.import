@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/audioOff.png-668ae7a1064522dbb6640ec9454fd9cc.stex"
+path="res://.import/audioOff.png-646213324dca154fc74439b0eca2ba96.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/graphics/kenney2/icons/audioOff.png"
-dest_files=[ "res://.import/audioOff.png-668ae7a1064522dbb6640ec9454fd9cc.stex" ]
+source_file="res://GFX/kenney2/icons/audioOff.png"
+dest_files=[ "res://.import/audioOff.png-646213324dca154fc74439b0eca2ba96.stex" ]
 
 [params]
 

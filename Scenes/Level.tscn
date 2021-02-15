@@ -76,17 +76,26 @@ points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
 
 [node name="Level" type="Node"]
 
-[node name="Background" type="Sprite" parent="."]
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 744, 282 )
+
+[node name="Environment" type="Node2D" parent="."]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Background" type="Sprite" parent="Environment"]
 position = Vector2( 653.89, 250.888 )
 texture = ExtResource( 2 )
 offset = Vector2( -601.099, 0 )
 
-[node name="Background2" type="Sprite" parent="."]
+[node name="Background2" type="Sprite" parent="Environment"]
 position = Vector2( 1677.56, 251.333 )
 texture = ExtResource( 2 )
 offset = Vector2( -601.099, 0 )
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="Environment"]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 70, 70 )
 collision_friction = 0.9
@@ -94,10 +103,7 @@ collision_bounce = 0.4
 format = 1
 tile_data = PoolIntArray( 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 3, 0, 524289, 3, 0, 524290, 3, 0, 524291, 3, 0, 524292, 3, 0, 524293, 3, 0, 524294, 3, 0, 524295, 3, 0, 524296, 3, 0, 524297, 3, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 524303, 3, 0 )
 
-[node name="TerrainCover" type="Sprite" parent="."]
+[node name="TerrainCover" type="Sprite" parent="Environment"]
 position = Vector2( 560.005, 549.233 )
 scale = Vector2( 17.492, 1 )
 texture = ExtResource( 4 )
-
-[node name="Enemy" parent="." instance=ExtResource( 5 )]
-position = Vector2( 744, 282 )

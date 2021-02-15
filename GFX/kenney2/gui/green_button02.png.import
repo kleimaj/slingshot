@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/green_button02.png-6bef6807b29719c9f9c09a436819ad31.stex"
+path="res://.import/green_button02.png-4e2c06f3b1182e3b1ffd86bb66eb931f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/graphics/kenney2/gui/green_button02.png"
-dest_files=[ "res://.import/green_button02.png-6bef6807b29719c9f9c09a436819ad31.stex" ]
+source_file="res://GFX/kenney2/gui/green_button02.png"
+dest_files=[ "res://.import/green_button02.png-4e2c06f3b1182e3b1ffd86bb66eb931f.stex" ]
 
 [params]
 
