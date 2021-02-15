@@ -1,10 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://GFX/kenney_physicsAssets_v2/Spritesheet/spritesheet_tiles.png" type="Texture" id=1]
 [ext_resource path="res://GFX/kenney_physicsAssets_v2/PNG/Backgrounds/blue_desert.png" type="Texture" id=2]
 [ext_resource path="res://GFX/terrain2.png" type="Texture" id=3]
 [ext_resource path="res://GFX/terrain-cover.png" type="Texture" id=4]
-[ext_resource path="res://GFX/kenney_physicsAssets_v2/PNG/Aliens/alienBeige_round.png" type="Texture" id=5]
+[ext_resource path="res://Objects/Enemy.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
@@ -74,9 +74,6 @@ points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
 3/shapes = [  ]
 3/z_index = 0
 
-[sub_resource type="CircleShape2D" id=2]
-radius = 35.0
-
 [node name="Level" type="Node"]
 
 [node name="Background" type="Sprite" parent="."]
@@ -92,6 +89,8 @@ offset = Vector2( -601.099, 0 )
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 70, 70 )
+collision_friction = 0.9
+collision_bounce = 0.4
 format = 1
 tile_data = PoolIntArray( 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 3, 0, 524289, 3, 0, 524290, 3, 0, 524291, 3, 0, 524292, 3, 0, 524293, 3, 0, 524294, 3, 0, 524295, 3, 0, 524296, 3, 0, 524297, 3, 0, 524298, 3, 0, 524299, 3, 0, 524300, 3, 0, 524301, 3, 0, 524302, 3, 0, 524303, 3, 0 )
 
@@ -100,14 +99,5 @@ position = Vector2( 560.005, 549.233 )
 scale = Vector2( 17.492, 1 )
 texture = ExtResource( 4 )
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2( 827.001, 241.581 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource( 2 )
-
-[node name="Sprite" type="Sprite" parent="RigidBody2D"]
-texture = ExtResource( 5 )
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 744, 282 )
