@@ -7,9 +7,10 @@
 radius = 61.1049
 height = 142.502
 
-[node name="Projectile" type="RigidBody2D"]
+[node name="Projectile" type="RigidBody2D" groups=[
+"projectiles",
+]]
 input_pickable = true
-mode = 1
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -31,7 +32,7 @@ scale = Vector2( 0.2, 0.2 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-current = true
+visible = false
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
