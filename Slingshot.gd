@@ -6,8 +6,8 @@ onready var camera = $"../Projectile/Camera2D"
 # Boolean is Projectile on Slingshot (initial value true)
 var on_slingshot = true
 
-const ELASTIC_FORCE = 30
-const TORQUE_FORCE = 25
+export var ELASTIC_FORCE = 30
+export var TORQUE_FORCE = 25
 
 # Vector2 Impulse Direction stores the direction along which we apply force to the character
 var impulse_direction = Vector2.ZERO

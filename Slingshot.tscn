@@ -5,11 +5,11 @@
 [ext_resource path="res://Slingshot.gd" type="Script" id=3]
 [ext_resource path="res://Sprites/clouds.png" type="Texture" id=4]
 
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 40.7079
-height = 83.7515
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 61.1049
+height = 142.502
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 1592.25, 13.6999 )
 
 [node name="Root" type="Node2D"]
@@ -23,19 +23,17 @@ script = ExtResource( 1 )
 [node name="Sprite" type="Sprite" parent="Projectile"]
 position = Vector2( 6.76448, 1.58001 )
 rotation = -1.5708
-scale = Vector2( 0.649322, 0.649322 )
+scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Projectile"]
-position = Vector2( 6.34961, 0.793701 )
+position = Vector2( 6.34961, 1.58691 )
 rotation = -1.5708
-shape = SubResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
+scale = Vector2( 0.2, 0.2 )
+shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="Projectile"]
 current = true
@@ -88,7 +86,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Floor/StaticBody2D"]
 position = Vector2( 1599.29, 16.2422 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Wall" type="ColorRect" parent="Environment"]
 visible = false
@@ -98,3 +96,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="released" from="Projectile" to="RubberBand" method="_on_Projectile_released"]
+[connection signal="pressed" from="GUI/Button" to="Projectile" method="_on_Button_pressed"]

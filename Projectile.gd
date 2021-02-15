@@ -19,3 +19,7 @@ func _input_event(viewport, event, shape_idx):
 func _physics_process(delta):
 	if drag_enabled:
 		position = get_global_mouse_position()
+
+
+func _on_Button_pressed():
+	get_tree().reload_current_scene()
