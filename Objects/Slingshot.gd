@@ -37,7 +37,13 @@ func _on_touch_pressed(event):
 
 func _on_touch_released(event):
 	launch_projectile(current_projectile, launch_force)
+	launch_force = Vector2()
+	$Timer.start()
 
 func _on_touch_drag(event):
 	launch_force = (rest.global_position - event.position).clamped(MAX_DISTANCE)
 	current_projectile.position = rest.global_position - launch_force
+
+
+func _on_Timer_timeout():
+	load_projectile()

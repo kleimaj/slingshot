@@ -12,3 +12,7 @@ centered = false
 
 [node name="RestPosition" type="Position2D" parent="."]
 position = Vector2( 75.2049, 65.664 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
