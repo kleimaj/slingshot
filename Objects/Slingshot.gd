@@ -2,7 +2,7 @@ extends Node2D
 const MAX_DISTANCE = 150
 
 export var ELASTIC_FORCE = 5
-export var MAX_POINTS = 100
+export var MAX_POINTS = 50
 export var GRAVITY: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 const projectile = preload("res://Objects/Projectile.tscn")

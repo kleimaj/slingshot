@@ -85,20 +85,20 @@ __meta__ = {
 }
 
 [node name="Background2" type="Sprite" parent="Environment"]
-position = Vector2( 2109.61, 37.0194 )
-scale = Vector2( 2.53811, 1.75902 )
+position = Vector2( 2820.16, -8.64822 )
+scale = Vector2( 3.75898, 2.60513 )
 texture = ExtResource( 8 )
 offset = Vector2( -601.099, 0 )
 
 [node name="Background3" type="Sprite" parent="Environment"]
-position = Vector2( 4707.15, 37.0194 )
-scale = Vector2( 2.53811, 1.75902 )
+position = Vector2( 6669.84, -8.64822 )
+scale = Vector2( 3.75898, 2.60513 )
 texture = ExtResource( 8 )
 offset = Vector2( -601.099, 0 )
 
 [node name="Background4" type="Sprite" parent="Environment"]
-position = Vector2( -480.385, 37.0194 )
-scale = Vector2( 2.53811, 1.75902 )
+position = Vector2( -1024.18, -8.64822 )
+scale = Vector2( 3.75898, 2.60513 )
 texture = ExtResource( 8 )
 offset = Vector2( -601.099, 0 )
 
@@ -120,11 +120,6 @@ position = Vector2( 233.085, 197.408 )
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="Enemy" parent="Enemies" instance=ExtResource( 5 )]
-position = Vector2( -263.937, -388.278 )
-z_index = 0
-mode = 1
-
 [node name="Enemy2" parent="Enemies" instance=ExtResource( 5 )]
 position = Vector2( 1142.13, -146.373 )
 z_index = 0
@@ -132,6 +127,31 @@ mode = 1
 
 [node name="Enemy3" parent="Enemies" instance=ExtResource( 5 )]
 position = Vector2( 461.908, -141.616 )
+z_index = 0
+mode = 1
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 851.681, 184.085 )
+z_index = 0
+mode = 1
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( -50.6704, -136.277 )
+z_index = 0
+mode = 1
+
+[node name="Enemy7" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 782.27, -141.616 )
+z_index = 0
+mode = 1
+
+[node name="Enemy8" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 574.035, -371.208 )
+z_index = 0
+mode = 1
+
+[node name="Enemy9" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 194.94, -344.512 )
 z_index = 0
 mode = 1
 
