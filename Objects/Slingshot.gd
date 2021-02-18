@@ -2,8 +2,8 @@ extends Node2D
 const MAX_DISTANCE = 150
 
 export var ELASTIC_FORCE = 5
-export var MAX_POINTS = 250
-export var GRAVITY = 9.8
+export var MAX_POINTS = 100
+export var GRAVITY: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var current_projectile = null
 var isActive = false
@@ -45,6 +45,7 @@ func _unhandled_input(event):
 
 func _on_touch_pressed(event):
 	isActive = true
+	line.show()
 
 func _on_touch_released(event):
 	if launch_force.length():
@@ -66,8 +67,7 @@ func _on_Timer_timeout():
 func update_trajectory(delta):
 	line.clear_points()
 	var pos = rest.position - launch_force
-	print(pos)
-	var velocity = current_projectile.global_transform.x * launch_force.length()
+	var velocity = launch_force * ELASTIC_FORCE
 	for i in MAX_POINTS:
 		line.add_point(pos)
 		velocity.y += delta * GRAVITY

@@ -2,7 +2,8 @@ extends RigidBody2D
 
 export var DESTRUCTION_THRESHOLD = 250
 
-
+func _ready():
+	mode = RigidBody2D.MODE_STATIC
 #func _on_Enemy_body_entered(body):
 #	if body is RigidBody2D:
 #		_on_rigid_body_collision(body)
@@ -31,6 +32,11 @@ func _integrate_forces(state):
 	# iterate over each collider
 	for collision_index in state.get_contact_count():
 		var collider = state.get_contact_collider_object(collision_index)
+		print("COLLISION")
 		if collider is RigidBody2D:
 			var collider_velocity = state.get_contact_collider_velocity_at_position(collision_index)
 			_on_rigid_body_collision_v2(collider, collider_velocity, state.linear_velocity)
+
+
+func _on_Enemy_body_entered(body):
+	print("collision")
