@@ -2,14 +2,22 @@ extends Node2D
 const MAX_DISTANCE = 150
 
 export var ELASTIC_FORCE = 5
+export var MAX_POINTS = 250
+export var GRAVITY = 9.8
 
 var current_projectile = null
+var isActive = false
 var launch_force = Vector2()
 onready var projectiles = get_tree().get_nodes_in_group("projectiles")
 onready var rest = $RestPosition
+onready var line = $Line2D
 
 func _ready():
 	load_projectile()
+
+func _process(delta):
+	if isActive:
+		update_trajectory(delta)
 
 func load_projectile():
 	if len(projectiles) > 0:
@@ -36,10 +44,13 @@ func _unhandled_input(event):
 		_on_touch_drag(event)
 
 func _on_touch_pressed(event):
-	print("pressed", event.position)
+	isActive = true
 
 func _on_touch_released(event):
 	if launch_force.length():
+		isActive = false
+		# hide line
+		line.hide()
 		launch_projectile(current_projectile, launch_force)
 		launch_force = Vector2()
 		$Timer.start()
@@ -51,3 +62,22 @@ func _on_touch_drag(event):
 
 func _on_Timer_timeout():
 	load_projectile()
+
+func update_trajectory(delta):
+	line.clear_points()
+	var pos = current_projectile.global_position
+	var velocity = current_projectile.global_transform.x * launch_force.length()
+	for i in MAX_POINTS:
+		line.add_point(pos)
+		velocity.y += delta * GRAVITY
+		pos += velocity * delta
+#		if pos.y > 0:
+#			break
+
+
+
+
+
+
+
+

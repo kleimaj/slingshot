@@ -22,4 +22,10 @@ position = Vector2( 75.2049, 65.664 )
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="Line2D" type="Line2D" parent="."]
+z_index = 2
+width = 15.0
+default_color = Color( 0.4, 0.501961, 1, 1 )
+joint_mode = 2
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
