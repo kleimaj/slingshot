@@ -85,8 +85,20 @@ __meta__ = {
 }
 
 [node name="Background2" type="Sprite" parent="Environment"]
-position = Vector2( 2331.25, 170.928 )
-scale = Vector2( 3.24602, 2.24963 )
+position = Vector2( 2109.61, 37.0194 )
+scale = Vector2( 2.53811, 1.75902 )
+texture = ExtResource( 8 )
+offset = Vector2( -601.099, 0 )
+
+[node name="Background3" type="Sprite" parent="Environment"]
+position = Vector2( 4707.15, 37.0194 )
+scale = Vector2( 2.53811, 1.75902 )
+texture = ExtResource( 8 )
+offset = Vector2( -601.099, 0 )
+
+[node name="Background4" type="Sprite" parent="Environment"]
+position = Vector2( -480.385, 37.0194 )
+scale = Vector2( 2.53811, 1.75902 )
 texture = ExtResource( 8 )
 offset = Vector2( -601.099, 0 )
 
@@ -110,13 +122,21 @@ position = Vector2( 233.085, 197.408 )
 
 [node name="Enemy" parent="Enemies" instance=ExtResource( 5 )]
 position = Vector2( -263.937, -388.278 )
+z_index = 0
 mode = 1
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource( 5 )]
 position = Vector2( 1142.13, -146.373 )
+z_index = 0
+mode = 1
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 461.908, -141.616 )
+z_index = 0
 mode = 1
 
 [node name="Projectiles" type="Node2D" parent="."]
+visible = false
 
 [node name="Projectile" parent="Projectiles" instance=ExtResource( 7 )]
 position = Vector2( 118.928, 473.825 )
@@ -131,6 +151,8 @@ position = Vector2( 120.263, 423.642 )
 position = Vector2( 550, 100 )
 current = true
 zoom = Vector2( 2, 2 )
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Camera2D"]
 scroll_ignore_camera_zoom = true

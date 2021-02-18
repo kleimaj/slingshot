@@ -39,5 +39,6 @@ func _integrate_forces(state):
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("projectiles"):
-		$Sprite.texture = load("res://GFX/kenney_physicsAssets_v2/PNG/Aliens/alienBlue_round.png")
+		$Sprite.texture = load("res://GFX/kenney_physicsAssets_v2/PNG/Aliens/alienYellow_round.png")
+		$Particles2D.emitting = false
 	

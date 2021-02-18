@@ -5,6 +5,8 @@ export var ELASTIC_FORCE = 5
 export var MAX_POINTS = 100
 export var GRAVITY: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+const projectile = preload("res://Objects/Projectile.tscn")
+
 var current_projectile = null
 var isActive = false
 var launch_force = Vector2()
@@ -20,9 +22,13 @@ func _process(delta):
 		update_trajectory(delta)
 
 func load_projectile():
-	if len(projectiles) > 0:
-		current_projectile = projectiles.pop_back()
-		current_projectile.global_position = $RestPosition.global_position
+#	if len(projectiles) > 0:
+#		current_projectile = projectiles.pop_back()
+#		current_projectile.global_position = $RestPosition.global_position
+	var spawned_projectile = projectile.instance()
+	self.add_child(spawned_projectile)
+	current_projectile = spawned_projectile
+	current_projectile.global_position = $RestPosition.global_position
 
 func launch_projectile(proj: RigidBody2D, launch_impulse):
 	proj.mode = RigidBody2D.MODE_RIGID
@@ -58,7 +64,7 @@ func _on_touch_released(event):
 
 func _on_touch_drag(event):
 	launch_force = (rest.global_position - event.position).clamped(MAX_DISTANCE)
-	current_projectile.position = rest.global_position - launch_force
+	current_projectile.global_position = rest.global_position - launch_force
 
 
 func _on_Timer_timeout():
