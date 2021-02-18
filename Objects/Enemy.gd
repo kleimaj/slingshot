@@ -41,4 +41,5 @@ func _on_Area2D_body_entered(body):
 	if body.is_in_group("projectiles"):
 		$Sprite.texture = load("res://GFX/kenney_physicsAssets_v2/PNG/Aliens/alienYellow_round.png")
 		$Particles2D.emitting = false
+		$HitParticles.emitting = true
 	
