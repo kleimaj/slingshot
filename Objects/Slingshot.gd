@@ -65,7 +65,8 @@ func _on_Timer_timeout():
 
 func update_trajectory(delta):
 	line.clear_points()
-	var pos = current_projectile.global_position
+	var pos = rest.position - launch_force
+	print(pos)
 	var velocity = current_projectile.global_transform.x * launch_force.length()
 	for i in MAX_POINTS:
 		line.add_point(pos)
