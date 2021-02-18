@@ -37,6 +37,7 @@ func _integrate_forces(state):
 			var collider_velocity = state.get_contact_collider_velocity_at_position(collision_index)
 			_on_rigid_body_collision_v2(collider, collider_velocity, state.linear_velocity)
 
-
-func _on_Enemy_body_entered(body):
-	print("collision")
+func _on_Area2D_body_entered(body):
+	if body.is_in_group("projectiles"):
+		$Sprite.texture = load("res://GFX/kenney_physicsAssets_v2/PNG/Aliens/alienBlue_round.png")
+	

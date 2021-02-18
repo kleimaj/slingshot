@@ -106,11 +106,15 @@ texture = ExtResource( 4 )
 [node name="Slingshot" parent="." instance=ExtResource( 6 )]
 position = Vector2( 233.085, 197.408 )
 
-[node name="Enemy" parent="." instance=ExtResource( 5 )]
-position = Vector2( -263.937, -388.278 )
+[node name="Enemies" type="Node2D" parent="."]
 
-[node name="Enemy2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1338.68, -317.722 )
+[node name="Enemy" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( -263.937, -388.278 )
+mode = 1
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 1142.13, -146.373 )
+mode = 1
 
 [node name="Projectiles" type="Node2D" parent="."]
 
