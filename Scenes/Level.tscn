@@ -1,11 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://GFX/kenney_physicsAssets_v2/Spritesheet/spritesheet_tiles.png" type="Texture" id=1]
+[ext_resource path="res://UI/Inventory.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GFX/terrain2.png" type="Texture" id=3]
 [ext_resource path="res://GFX/terrain-cover.png" type="Texture" id=4]
 [ext_resource path="res://Objects/Enemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Objects/Slingshot.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GFX/backpack.png" type="Texture" id=7]
 [ext_resource path="res://GFX/kenney_physicsAssets_v2/PNG/Backgrounds/blue_shroom.png" type="Texture" id=8]
+[ext_resource path="res://UI/UI.gd" type="Script" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
@@ -177,6 +180,31 @@ motion_mirroring = Vector2( 1020, 1020 )
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UI" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="UI"]
+
+[node name="Inventory" parent="UI/CanvasLayer" instance=ExtResource( 2 )]
+
+[node name="TextureButton" type="TextureButton" parent="UI/CanvasLayer"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -101.0
+margin_top = -101.0
+texture_normal = ExtResource( 7 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
