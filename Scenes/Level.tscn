@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://GFX/kenney_physicsAssets_v2/Spritesheet/spritesheet_tiles.png" type="Texture" id=1]
 [ext_resource path="res://UI/Inventory.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://UI/UI.gd" type="Script" id=9]
 [ext_resource path="res://GFX/book.png" type="Texture" id=10]
 [ext_resource path="res://GFX/Openbook.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/GameState.gd" type="Script" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
@@ -81,6 +82,7 @@ points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
 3/z_index = 0
 
 [node name="Level" type="Node"]
+script = ExtResource( 12 )
 
 [node name="Environment" type="Node2D" parent="."]
 __meta__ = {

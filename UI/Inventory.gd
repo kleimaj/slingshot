@@ -4,6 +4,8 @@ var selected_pill = null
 var selected_idx = 0
 onready var grid = $GridContainer
 
+signal projectile_change(texture_path)
+
 var map = {}
 
 func _ready():
@@ -25,6 +27,8 @@ func slot_gui_input(event: InputEvent, slot):
 			selected_idx = map[slot.name]
 			# Set new selected, set new pill
 			set_selected()
+			# Emit projectile change signal
+			emit_signal("projectile_change", get_pill_texture_path())
 
 func get_pill():
 	return selected_pill
