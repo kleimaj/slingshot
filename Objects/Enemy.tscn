@@ -32,6 +32,7 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="Particles2D" type="CPUParticles2D" parent="."]
+visible = false
 amount = 12
 texture = ExtResource( 3 )
 emission_shape = 1

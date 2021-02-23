@@ -19,10 +19,6 @@ config/name="Slingshot"
 run/main_scene="res://Scenes/Level.tscn"
 config/icon="res://icon.png"
 
-[display]
-
-window/size/resizable=false
-
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
