@@ -241,5 +241,6 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="projectile_change" from="UI/CanvasLayer/Inventory" to="Slingshot" method="_on_Inventory_projectile_change"]
 [connection signal="pressed" from="UI/CanvasLayer/BackpackButton" to="UI" method="_on_BackpackButton_pressed"]
 [connection signal="pressed" from="UI/CanvasLayer/BookButton" to="UI" method="_on_BookButton_pressed"]

@@ -81,10 +81,6 @@ func update_trajectory(delta):
 #		if pos.y > 0:
 #			break
 
-
-
-
-
-
-
-
+func _on_Inventory_projectile_change(texture_path):
+	print(texture_path)
+	current_projectile.get_node("Sprite").texture.load_path = texture_path	

@@ -27,7 +27,7 @@ func slot_gui_input(event: InputEvent, slot):
 			selected_idx = map[slot.name]
 			# Set new selected, set new pill
 			set_selected()
-			# Emit projectile change signal
+#			# Emit projectile change signal
 			emit_signal("projectile_change", get_pill_texture_path())
 
 func get_pill():
