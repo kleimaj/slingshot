@@ -41,7 +41,17 @@ margin_bottom = 35.0
 rect_min_size = Vector2( 35, 35 )
 custom_styles/panel = SubResource( 1 )
 
-[node name="Pill1" type="TextureRect" parent="GridContainer/Slot1"]
+[node name="Selected" type="TextureRect" parent="GridContainer/Slot1"]
+self_modulate = Color( 1, 0.596078, 0.596078, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pill" type="TextureRect" parent="GridContainer/Slot1"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -64,7 +74,19 @@ margin_bottom = 35.0
 rect_min_size = Vector2( 35, 35 )
 custom_styles/panel = SubResource( 1 )
 
-[node name="Pill2" type="TextureRect" parent="GridContainer/Slot2"]
+[node name="Selected" type="TextureRect" parent="GridContainer/Slot2"]
+visible = false
+self_modulate = Color( 1, 0.596078, 0.596078, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pill" type="TextureRect" parent="GridContainer/Slot2"]
+self_modulate = Color( 1, 0.960784, 0, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -87,7 +109,19 @@ margin_bottom = 35.0
 rect_min_size = Vector2( 35, 35 )
 custom_styles/panel = SubResource( 1 )
 
-[node name="Pill3" type="TextureRect" parent="GridContainer/Slot3"]
+[node name="Selected" type="TextureRect" parent="GridContainer/Slot3"]
+visible = false
+self_modulate = Color( 1, 0.596078, 0.596078, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pill" type="TextureRect" parent="GridContainer/Slot3"]
+modulate = Color( 0.921569, 0, 1, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
