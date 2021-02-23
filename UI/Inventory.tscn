@@ -1,3 +1,102 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GFX/kenney2/gui/blue_button02.png" type="Texture" id=1]
+[ext_resource path="res://GFX/kenney2/gui/panel.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/pill_1.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 256, 256 )
 
 [node name="Inventory" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 346.62
+margin_top = 200.633
+margin_right = 672.62
+margin_bottom = 381.633
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 494.335
+margin_top = 234.351
+margin_right = 652.335
+margin_bottom = 347.351
+custom_constants/vseparation = 8
+custom_constants/hseparation = 8
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot1" type="Panel" parent="GridContainer"]
+margin_right = 35.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 35, 35 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Pill1" type="TextureRect" parent="GridContainer/Slot1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -8.0
+margin_top = -17.5
+margin_right = 8.0
+margin_bottom = 17.5
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot2" type="Panel" parent="GridContainer"]
+margin_left = 43.0
+margin_right = 78.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 35, 35 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Pill2" type="TextureRect" parent="GridContainer/Slot2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -8.0
+margin_top = -17.5
+margin_right = 8.0
+margin_bottom = 17.5
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot3" type="Panel" parent="GridContainer"]
+margin_left = 86.0
+margin_right = 121.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 35, 35 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Pill3" type="TextureRect" parent="GridContainer/Slot3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -8.0
+margin_top = -17.5
+margin_right = 8.0
+margin_bottom = 17.5
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
