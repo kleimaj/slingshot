@@ -29,6 +29,9 @@ func slot_gui_input(event: InputEvent, slot):
 func get_pill():
 	return selected_pill
 
+func get_pill_texture_path():
+	return selected_pill.texture.load_path
+
 func hide_selected():
 	grid.get_child(selected_idx).get_child(0).hide()
 
