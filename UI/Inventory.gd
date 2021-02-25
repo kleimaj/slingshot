@@ -7,6 +7,11 @@ onready var grid = $GridContainer
 signal projectile_change(texture_path)
 
 var map = {}
+var ItemDisplay = {
+	"Blue Pill": "Blue pills are best against the blue type of mushrooms!",
+	"Red Pill": "Red pills are best against the red type of mushrooms!",
+	"Green Pill": "Green pills are best against the green type of mushrooms!",
+}
 
 func _ready():
 	#	Show the default selected pill (pill 0)
@@ -42,3 +47,5 @@ func hide_selected():
 func set_selected():
 	grid.get_child(selected_idx).get_child(0).show()
 	selected_pill = grid.get_child(selected_idx).get_child(1)
+	$TextureRect/VBoxContainer/ItemName.bbcode_text = "[b]%s[/b]" % selected_pill.name
+	$TextureRect/VBoxContainer/ItemDescription.bbcode_text = ItemDisplay[selected_pill.name]
