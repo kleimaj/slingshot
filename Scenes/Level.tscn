@@ -199,6 +199,7 @@ __meta__ = {
 [node name="CanvasLayer" type="CanvasLayer" parent="UI"]
 
 [node name="Inventory" parent="UI/CanvasLayer" instance=ExtResource( 2 )]
+position = Vector2( 535.143, 313.951 )
 
 [node name="Book" type="TextureRect" parent="UI/CanvasLayer"]
 anchor_left = 0.5
